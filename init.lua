@@ -171,6 +171,10 @@ do
   -- instead raise a dialog asking if you wish to save the current file(s)
   -- See `:help 'confirm'`
   vim.o.confirm = true
+
+  -- Keep file inodes intact when saving
+  -- This forces vim to overwrite the original file instead of creating a new file and renaming it.
+  vim.opt.backupcopy = "yes"
 end
 
 -- ============================================================
